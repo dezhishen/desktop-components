@@ -10,8 +10,15 @@ import (
 func main() {
 	widgets.NewQApplication(len(os.Args), os.Args)
 	window := widgets.NewQMainWindow(nil, 0)
+	gltout := widgets.NewQGridLayout(window)
+	gltout.SetContentsMargins(10, 20, 10, 20)
+	window.SetLayout(gltout)
+
 	label := widgets.NewQLabel(window, 0)
-	label.SetSizeIncrement2(200, 20)
+	label.SetMinimumSize2(320, 0)
+	label.SetStyleSheet("QLabel {  color: red; font-size: 16px }")
+
+	gltout.AddWidget(label)
 	go setTime(label)
 	window.SetWindowTitle("Hello world")
 	window.Show()

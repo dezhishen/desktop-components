@@ -6,10 +6,6 @@ golang 桌面组件
 ## 按照要求配置环境变量
 * QT_DIR
 * QT_VERSION
-## 项目跟目录执行如下命令
-* `go mod vendor`
-* `go mod tidy`
-* `qtsetup`
 
-# 打包
-项目根目录下执行 `sh scripts\build.sh pkg\helloworld\helloworld.go `
+## 运行
+等同普通golang运行,但需要在生成的文件目录下下载一些依赖,可能需要翻墙
